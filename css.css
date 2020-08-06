@@ -1,0 +1,252 @@
+.hexagon-box {
+  position: relative;
+  height: calc(49.65px * 4 + 43px / 2 + 45px);
+}
+
+@media screen and (min-width: 576px) {
+  .hexagon-box {
+    height: calc(60.62px * 4 + 52.5px / 2 + 45px);
+  }
+}
+
+.hexagon-box .hexagon-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  width: calc(86px * 3 + 10px);
+  height: calc(49.65px * 3 + 43px + 20px);
+}
+
+@media screen and (min-width: 576px) {
+  .hexagon-box .hexagon-container {
+    width: calc(105px * 3 + 10px);
+    height: calc(60.62px * 3 + 52.5px + 20px);
+  }
+}
+
+.hexagon-box .hexagon-container .hexagon-row {
+  height: 49.65px;
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(2) {
+  margin: calc(43px / 2 + 10px) 0;
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:first-child {
+  -webkit-transform: translateX(calc(-86px - 5px));
+          transform: translateX(calc(-86px - 5px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:first-child:hover {
+  -webkit-transform: translateX(calc(-96px - 5px)) translateY(calc(0px));
+          transform: translateX(calc(-96px - 5px)) translateY(calc(0px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:last-child {
+  -webkit-transform: translateX(calc(86px + 5px));
+          transform: translateX(calc(86px + 5px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:last-child:hover {
+  -webkit-transform: translateX(calc(96px + 5px)) translateY(calc(0px));
+          transform: translateX(calc(96px + 5px)) translateY(calc(0px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:first-child {
+  -webkit-transform: translateX(calc(-43px - 2.5px));
+          transform: translateX(calc(-43px - 2.5px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:first-child:hover {
+  -webkit-transform: translateX(calc(-53px - 2.5px)) translateY(calc(-11px));
+          transform: translateX(calc(-53px - 2.5px)) translateY(calc(-11px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:last-child {
+  -webkit-transform: translateX(calc(43px + 2.5px));
+          transform: translateX(calc(43px + 2.5px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:last-child:hover {
+  -webkit-transform: translateX(calc(53px + 2.5px)) translateY(calc(-11px));
+          transform: translateX(calc(53px + 2.5px)) translateY(calc(-11px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:first-child {
+  -webkit-transform: translateX(calc(-43px - 2.5px));
+          transform: translateX(calc(-43px - 2.5px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:first-child:hover {
+  -webkit-transform: translateX(calc(-53px - 2.5px)) translateY(calc(11px));
+          transform: translateX(calc(-53px - 2.5px)) translateY(calc(11px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:last-child {
+  -webkit-transform: translateX(calc(43px + 2.5px));
+          transform: translateX(calc(43px + 2.5px));
+}
+
+.hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:last-child:hover {
+  -webkit-transform: translateX(calc(53px + 2.5px)) translateY(calc(11px));
+          transform: translateX(calc(53px + 2.5px)) translateY(calc(11px));
+}
+
+@media screen and (min-width: 576px) {
+  .hexagon-box .hexagon-container .hexagon-row {
+    height: 60.62px;
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(2) {
+    margin: calc(52.5px / 2 + 10px) 0;
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:first-child {
+    -webkit-transform: translateX(calc(-105px - 5px));
+            transform: translateX(calc(-105px - 5px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:first-child:hover {
+    -webkit-transform: translateX(calc(-115px - 5px)) translateY(calc(0px));
+            transform: translateX(calc(-115px - 5px)) translateY(calc(0px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:last-child {
+    -webkit-transform: translateX(calc(105px + 5px));
+            transform: translateX(calc(105px + 5px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(2) .hexagon:last-child:hover {
+    -webkit-transform: translateX(calc(115px + 5px)) translateY(calc(0px));
+            transform: translateX(calc(115px + 5px)) translateY(calc(0px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:first-child {
+    -webkit-transform: translateX(calc(-52.5px - 2.5px));
+            transform: translateX(calc(-52.5px - 2.5px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:first-child:hover {
+    -webkit-transform: translateX(calc(-62.5px - 2.5px)) translateY(calc(-11px));
+            transform: translateX(calc(-62.5px - 2.5px)) translateY(calc(-11px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:last-child {
+    -webkit-transform: translateX(calc(52.5px + 2.5px));
+            transform: translateX(calc(52.5px + 2.5px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(1) .hexagon:last-child:hover {
+    -webkit-transform: translateX(calc(62.5px + 2.5px)) translateY(calc(-11px));
+            transform: translateX(calc(62.5px + 2.5px)) translateY(calc(-11px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:first-child {
+    -webkit-transform: translateX(calc(-52.5px - 2.5px));
+            transform: translateX(calc(-52.5px - 2.5px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:first-child:hover {
+    -webkit-transform: translateX(calc(-62.5px - 2.5px)) translateY(calc(11px));
+            transform: translateX(calc(-62.5px - 2.5px)) translateY(calc(11px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:last-child {
+    -webkit-transform: translateX(calc(52.5px + 2.5px));
+            transform: translateX(calc(52.5px + 2.5px));
+  }
+  .hexagon-box .hexagon-container .hexagon-row:nth-child(3) .hexagon:last-child:hover {
+    -webkit-transform: translateX(calc(62.5px + 2.5px)) translateY(calc(11px));
+            transform: translateX(calc(62.5px + 2.5px)) translateY(calc(11px));
+  }
+}
+
+.hexagon {
+  left: 0;
+  right: 0;
+  width: 86px;
+  margin: auto;
+  cursor: default;
+  height: 49.65px;
+  position: absolute;
+  pointer-events: all;
+  -webkit-transition: -webkit-transform;
+  transition: -webkit-transform;
+  transition: transform;
+  transition: transform, -webkit-transform;
+  background-color: green;
+  -webkit-transition-duration: 160ms;
+          transition-duration: 160ms;
+}
+
+.hexagon > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hexagon::before, .hexagon::after {
+  width: 0;
+  content: " ";
+  position: absolute;
+  border-top-color: green !important;
+  border-left: 43px solid transparent;
+  border-right: 43px solid transparent;
+  border-bottom-color: green !important;
+}
+
+.hexagon::before {
+  bottom: 100%;
+  border-bottom: 24.83px solid;
+}
+
+.hexagon::after {
+  top: 100%;
+  border-top: 24.83px solid;
+}
+
+@media screen and (min-width: 576px) {
+  .hexagon {
+    width: 105px;
+    height: 60.62px;
+  }
+  .hexagon::before, .hexagon::after {
+    border-left: 52.5px solid transparent;
+    border-right: 52.5px solid transparent;
+  }
+  .hexagon::before {
+    border-bottom: 30.31px solid;
+  }
+  .hexagon::after {
+    border-top: 30.31px solid;
+  }
+}
+
+.hexagon-i {
+  -webkit-filter: drop-shadow(-3px -5px 0 blue);
+          filter: drop-shadow(-3px -5px 0 blue);
+}
+
+.hexagon-ii {
+  -webkit-filter: drop-shadow(3px -5px 0 blue);
+          filter: drop-shadow(3px -5px 0 blue);
+}
+
+.hexagon-iii {
+  -webkit-filter: drop-shadow(-7px 1px 0 blue);
+          filter: drop-shadow(-7px 1px 0 blue);
+}
+
+.hexagon-v {
+  -webkit-filter: drop-shadow(7px 1px 0 blue);
+          filter: drop-shadow(7px 1px 0 blue);
+}
+
+.hexagon-vi {
+  -webkit-filter: drop-shadow(-4px 6px 0 blue);
+          filter: drop-shadow(-4px 6px 0 blue);
+}
+
+.hexagon-vii {
+  -webkit-filter: drop-shadow(4px 6px 0 blue);
+          filter: drop-shadow(4px 6px 0 blue);
+}
+/*# sourceMappingURL=css.css.map */

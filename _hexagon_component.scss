@@ -1,0 +1,180 @@
+@mixin respond-HEX($media) {
+    @if $media=="small" {
+        @media screen and (min-width: 576px) {
+            @content;
+        }
+    }
+    @else if $media=="medium" {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $media=="large" {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $media=="xlarge" {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $media=="xxlarge" {
+        @media screen and (min-width: 1441px) {
+            @content;
+        }
+    }
+    @else if $media=="landscape" {
+        @media screen and (min-width: 768px) and (min-height: 1024px) and(max-height: 1024px) {
+            @content;
+        }
+    }
+    @else if $media=="scroll" {
+        @media screen and (max-height: 854px) {
+            @content;
+        }
+    }
+}
+
+@mixin drop-shadow-HEX($paint: green) {
+    &-i {
+        filter: drop-shadow(-3px -5px 0 $paint);
+    }
+    &-ii {
+        filter: drop-shadow(3px -5px 0 $paint);
+    }
+    &-iii {
+        filter: drop-shadow(-7px 1px 0 $paint);
+    }
+    &-v {
+        filter: drop-shadow(7px 1px 0 $paint);
+    }
+    &-vi {
+        filter: drop-shadow(-4px 6px 0 $paint);
+    }
+    &-vii {
+        filter: drop-shadow(4px 6px 0 $paint);
+    }
+}
+
+@mixin children-HEX($one, $two, $three) {
+    .hexagon {
+        &:first-child {
+            transform: translateX(calc(-#{$one} - #{$two}));
+            &:hover {
+                transform: translateX(calc(-#{$one + 10} - #{$two})) translateY(calc(#{$three}));
+            }
+        }
+        &:last-child {
+            transform: translateX(calc(#{$one} + #{$two}));
+            &:hover {
+                transform: translateX(calc(#{$one + 10} + #{$two})) translateY(calc(#{$three}));
+            }
+        }
+    }
+}
+
+@mixin hexagon-component($base, $filter:false, $shadow: null) {
+    .hexagon-box {
+        position: relative;
+        height: calc(49.65px * 4 + 43px / 2 + 45px);
+        @include respond-HEX("small") {
+            height: calc(60.62px * 4 + 52.5px / 2 + 45px);
+        }
+        .hexagon-container {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            margin: auto;
+            position: absolute;
+            width: calc(86px * 3 + 10px);
+            height: calc(49.65px * 3 + 43px + 20px);
+            @include respond-HEX("small") {
+                width: calc(105px * 3 + 10px);
+                height: calc(60.62px * 3 + 52.5px + 20px);
+            }
+            .hexagon-row {
+                height: 49.65px;
+                &:nth-child(2) {
+                    margin: calc(43px / 2 + 10px) 0;
+                    @include children-HEX(86px, 5px, 0px);
+                }
+                &:nth-child(1) {
+                    @include children-HEX(43px, 2.5px, -11px);
+                }
+                &:nth-child(3) {
+                    @include children-HEX(43px, 2.5px, 11px);
+                }
+                @include respond-HEX("small") {
+                    height: 60.62px;
+                    &:nth-child(2) {
+                        margin: calc(52.5px / 2 + 10px) 0;
+                        @include children-HEX(105px, 5px, 0px);
+                    }
+                    &:nth-child(1) {
+                        @include children-HEX(52.5px, 2.5px, -11px);
+                    }
+                    &:nth-child(3) {
+                        @include children-HEX(52.5px, 2.5px, 11px);
+                    }
+                }
+            }
+        }
+    }
+    .hexagon {
+        >* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        left: 0;
+        right: 0;
+        width: 86px;
+        margin: auto;
+        cursor: default;
+        height: 49.65px;
+        position: absolute;
+        pointer-events: all;
+        transition: transform;
+        background-color: $base;
+        transition-duration: 160ms;
+        &::before,
+        &::after {
+            width: 0;
+            content: " ";
+            position: absolute;
+            border-top-color: $base !important;
+            border-left: 43px solid transparent;
+            border-right: 43px solid transparent;
+            border-bottom-color: $base !important;
+        }
+        &::before {
+            bottom: 100%;
+            border-bottom: 24.83px solid;
+        }
+        &::after {
+            top: 100%;
+            border-top: 24.83px solid;
+        }
+        @include respond-HEX("small") {
+            width: 105px;
+            height: 60.62px;
+            &::before,
+            &::after {
+                border-left: 52.5px solid transparent;
+                border-right: 52.5px solid transparent;
+            }
+            &::before {
+                border-bottom: 30.31px solid;
+            }
+            &::after {
+                border-top: 30.31px solid;
+            }
+        }
+        @if ($filter==true) {
+            @include drop-shadow-HEX($shadow);
+        }
+    }
+}
